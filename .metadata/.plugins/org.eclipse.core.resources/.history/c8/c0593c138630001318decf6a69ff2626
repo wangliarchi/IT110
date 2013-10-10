@@ -1,0 +1,32 @@
+/*
+ * File: ProgramHierarchy.java
+ * Name: 
+ * Section Leader: 
+ * ---------------------------
+ * This file is the starter file for the ProgramHierarchy problem.
+ */
+
+import acm.graphics.*;
+import acm.program.*;
+import java.awt.*;
+
+public class ProgramHierarchy extends GraphicsProgram {	
+	public void run() {
+		int widthP= 100;
+		int heightP=50;
+		int widthG= ;
+		int heightG= ;
+		
+		GLable()
+		
+		
+		/* void setLocation(double x, double y)
+           Sets the location of this object to the specified coordinates.
+		 * 
+		 * 
+		 * 
+		 */
+		
+	}
+}
+

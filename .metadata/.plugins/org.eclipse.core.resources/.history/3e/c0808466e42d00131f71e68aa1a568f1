@@ -1,0 +1,26 @@
+/*
+ * File: Target.java
+ * Name: 
+ * Section Leader: 
+ * -----------------
+ * This file is the starter file for the Target problem.
+ */
+
+import acm.graphics.*;
+import acm.program.*;
+import java.awt.*;
+
+public class Target extends GraphicsProgram {	
+	public void run() {
+	GOval oval1 = new GOval(100,50,144,144);
+	oval1.setFilled(true);
+	oval1.setColor(Color.RED);
+	add(oval1);
+	GOval oval2 = new GOval(150.4,100.4,93.6,93.6);
+    oval2.setFilled(true);
+    oval2.setColor(Color.WHITE);
+    add(oval2);
+		
+		
+	}
+}
