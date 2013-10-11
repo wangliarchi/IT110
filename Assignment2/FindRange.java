@@ -1,8 +1,7 @@
-/*
- * File: FindRange.java
+* File: FindRange.java
  * Name: wangli 
  * Section Leader: jianbin ray
- * helper: jianbin
+ * helper: jianbin, http://cs106a.tumblr.com
  * --------------------
  * This file is the starter file for the FindRange problem.
  * input some numbers until the sentinel, the program will display the smallest and largest.
@@ -20,24 +19,31 @@ public class FindRange extends ConsoleProgram {
 	private static final int SENTINEL = 0;
 
 	public void run() {
+		alertMessage();
+		findSmallestLargest();
+	}
+	private void alertMessage(){
 		println("This program finds the largest and smallest numbers");
-/* send the alert message brick */
-		int num1 = readInt("?");
-		if( num1 == SENTINEL) {
-		println("you have put in an end number");
-		}
+		/* send the alert message brick */
+				int num1 = readInt("?");
+				if( num1 == SENTINEL) {
+				println("you have put in an end number");
+				}	
+	}
+		
 /* Find the largest and the smallest brick*/
-		else{
-		int smallest = num1;
-		int largest = num1;
+	private void findSmallestLargest(){
+		int number = readInt("?");
+		int smallest = number;
+		int largest = number;
 		while(true){
-			int number = readInt("?");
-			if(number == SENTINEL) break;
-			if(number !=SENTINEL&&number<=smallest){
-				smallest = number;
+			int num = readInt("?");
+			if(num == SENTINEL) break;
+			if(num !=SENTINEL&&num<=smallest){
+				smallest = num;
 		}
-			if(number>=largest){
-				largest = number;
+			if(num>=largest){
+				largest = num;
 				}
 			}
 /* display the largest and smallest brick */
@@ -46,7 +52,7 @@ public class FindRange extends ConsoleProgram {
 			
 		}
 	}
-}
+
 
 
 
