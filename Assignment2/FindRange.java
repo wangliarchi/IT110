@@ -26,7 +26,7 @@ public class FindRange extends ConsoleProgram {
 		if( num1 == SENTINEL) {
 		println("you have put in an end number");
 		}
-/*   */
+/* Find the largest and the smallest brick*/
 		else{
 		int smallest = num1;
 		int largest = num1;
@@ -40,6 +40,7 @@ public class FindRange extends ConsoleProgram {
 				largest = number;
 				}
 			}
+/* display the largest and smallest brick */
 		println("the smallest number is"+":" + smallest);
 		println("the largest numer is"+":" + largest );
 			
