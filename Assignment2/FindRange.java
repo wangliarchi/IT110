@@ -1,7 +1,7 @@
 * File: FindRange.java
  * Name: wangli 
  * Section Leader: jianbin ray
- * helper: jianbin, http://cs106a.tumblr.com
+ * helper: jianbin,  http://gabaix.us/blog/find-range
  * --------------------
  * This file is the starter file for the FindRange problem.
  * input some numbers until the sentinel, the program will display the smallest and largest.
