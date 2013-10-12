@@ -1,7 +1,7 @@
 /*
  * File: PythagoreanTheorem.java
- * Name: 
- * Section Leader: 
+ * Name: wangli
+ * Section Leader: jianbin Ray
  * -----------------------------
  * This file is the starter file for the PythagoreanTheorem problem.
  */
