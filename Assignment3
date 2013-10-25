@@ -7,6 +7,7 @@
  * This file will eventually implement the game of Breakout.
  */
 
+
 import acm.graphics.*;
 import acm.program.*;
 import acm.util.*;
@@ -61,7 +62,7 @@ public class Breakout extends GraphicsProgram {
 	/* Method: run() */
 	/** Runs the Breakout program. */
 	/*
-	 * This program will execute setuup first, which will get ready for bricks
+	 * This program will execute setup first, which will get ready for bricks
 	 * paddles and place the ball as well. with the function of mouse listener
 	 * can made the paddle follow mouse. with all the background of the game
 	 * done, then the game will be start in playTheGame
@@ -137,7 +138,7 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 
-	/* place the ball, it init position is in the middle of the canvas */
+	/* place the ball, its init position is in the middle of the canvas */
 	private void placeBall() {
 		double ballX = getWidth() / 2 - BALL_RADIUS;
 		double ballY = getHeight() / 2 - BALL_RADIUS;
@@ -161,7 +162,7 @@ public class Breakout extends GraphicsProgram {
 	 */
 	private void moveBall() {
 		ball.move(vx, vy);
-		if (ball.getX() <= 0 && ball.getX() >= getWidth() - BALL_RADIUS * 2) {
+		if (ball.getX() <= 0 || ball.getX() >= getWidth() - BALL_RADIUS * 2) {
 			vx = -vx;
 		}
 		if (ball.getY() <= 0) {
@@ -180,7 +181,7 @@ public class Breakout extends GraphicsProgram {
 		if (collider == paddle) {
 			vy = -vy;
 		}
-		if (collider != null) {
+		else if (collider != null) {
 			vy = -vy;
 			remove(collider);
 			counter++;
@@ -190,7 +191,7 @@ public class Breakout extends GraphicsProgram {
 	/*
 	 * use getElementAt(x, y) method to check if the ball hit something in both
 	 * direction (x, y),(x, y + 2 * r), (x + 2 * r, y + 2 * r), (x + 2 * r, y)
-	 * if there is paddle in one of the four direction, then it will return the
+	 * if there is paddle in/ one of the four direction, then it will return the
 	 * ball's position to the method.while if there's nothing, it will return
 	 * null to getElementAt(x, y).
 	 */
@@ -257,7 +258,6 @@ public class Breakout extends GraphicsProgram {
 	private GLabel result;
 	private int turn = 0;
 }
-
 
 	
 	
