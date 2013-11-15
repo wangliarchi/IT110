@@ -1,0 +1,79 @@
+/*
+ * File: Hangman.java
+ * ------------------
+ * This program will eventually play the Hangman game from
+ * Assignment #4.
+ */
+
+import acm.graphics.*;
+import acm.program.*;
+import acm.util.*;
+
+import java.awt.*;
+
+import com.sun.tools.corba.se.idl.constExpr.Times;
+
+public class Hangman extends ConsoleProgram {
+	
+	private HangmanLexicon wordsToGuess = new HangmanLexicon();
+    private RandomGenerator rgen = RandomGenerator.getInstance();
+    private String secretWord;
+    private int counter = 6;
+    private String dash;
+    private String changeDash = dashNumber();
+    public void run() {
+    	 setUpGame();
+         guessWord(); }
+
+    private void setUpGame(){
+    	println("Welcome to Hangman ! ");
+      /* initiate it with "-" equals to the length of the random word chosen */  
+        dashNumber();
+        println(" the word now looks like this " + dash );  
+    }
+    private String dashNumber(){
+    	String dash = "";
+    	for(int i = 0; i < secretWord.length() - 1; i++){
+    		dash += "-";  
+         }
+    	return dash;
+    }
+    private void guessWord(){
+      /*Generates a random word selected from the HangmanLexicon*/
+  	  int random = rgen.nextInt(0, wordsToGuess.getWordCount());
+   	  String secretWord = wordsToGuess.getWord(random);
+       /* input a character */
+      String inputCh = readLine("please input one character a time to guess : ");
+      /* string inputCr convert to char type*/
+      char ch = inputCh.charAt(0);
+         
+       /* find if it is equal to an character in the array. 
+        * then updated the guessed letters are correct . */
+     while(counter > 0){
+         for(int ai = 0; i < secretWord.length() - 1; i++){
+           if ( ch != secretWord.charAt(i)) {
+        	 println(" the word doesn't contain this character , ");
+        	 println(" you have " + counter + "numbers left to guess"); 
+        	 counter--; 
+          }
+            if ( ch == secretWord.charAt(0) ){
+        	  changeDash = inputCh + secretWord.substring(1);
+          }
+          
+          if ( ch == secretWord.charAt(i)){
+        	 changeDash = secretWord.substring(0, i) + inputCh + secretWord.substring(i + 1);	 
+         }
+         }
+         }   
+       /* println various messages when user input right or wrong characters, 
+        * counter the remaining guessing 
+        * Times.*/
+        	
+        string secretWord = rgen.nextInt(0, getWord.index(int i));
+    }	  char ch = readChar("?");    */
+    	
+    }
+    
+    
+    }
+
